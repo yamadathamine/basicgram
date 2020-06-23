@@ -7,7 +7,7 @@
         "dev": "nodemon --ext js,ts,json --watch src --exec 'ts-node' ./src/bin/www",
         "build": "npm run tsc",
         "prebuild": "del './dist'",
-        "postbuild": "cpy --cwd=src '**/*' '!**/*.ts' './../dist' --no-overwrite --parents",
+        "postbuild": "cpy '**/*' '!**/*.ts' './../dist' --cwd=src --parents",
         "tsc": "tsc"
     },
     "dependencies": {
